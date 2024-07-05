@@ -121,11 +121,10 @@
 -define:ENABLE_TIMELINE
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
+-define:DOTWEEN
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
--r:"Assets/Demigiant/DOTween/DOTween.dll"
--r:"Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-5.6-Editor.dll"
--r:"Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-5.6-Runtime.dll"
+-r:"Assets/Plugins/Demigiant/DOTween/DOTween.dll"
 -r:"E:/projects/Editor/2022.3.29f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"E:/projects/Editor/2022.3.29f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
 -r:"E:/projects/Editor/2022.3.29f1/Editor/Data/Managed/UnityEngine/UnityEditor.DiagnosticsModule.dll"
@@ -331,12 +330,15 @@
 -r:"E:/projects/Editor/2022.3.29f1/Editor/Data/PlaybackEngines/AndroidPlayer/Unity.Android.Gradle.dll"
 -r:"E:/projects/Editor/2022.3.29f1/Editor/Data/PlaybackEngines/AndroidPlayer/Unity.Android.GradleProject.dll"
 -r:"E:/projects/Editor/2022.3.29f1/Editor/Data/PlaybackEngines/AndroidPlayer/Unity.Android.Types.dll"
+-r:"Library/Bee/artifacts/1300b0aEDbg.dag/Assembly-CSharp-firstpass.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aEDbg.dag/MaxSdk.Scripts.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aEDbg.dag/MaxSdk.Scripts.IntegrationManager.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aEDbg.dag/MaxSdk.Scripts.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aEDbg.dag/Unity.Recorder.Base.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aEDbg.dag/Unity.Recorder.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aEDbg.dag/Unity.Recorder.ref.dll"
+-r:"Library/Bee/artifacts/1300b0aEDbg.dag/Unity.TextMeshPro.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1300b0aEDbg.dag/Unity.TextMeshPro.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aEDbg.dag/Unity.Timeline.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aEDbg.dag/Unity.Timeline.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aEDbg.dag/UnityEditor.UI.ref.dll"
@@ -346,13 +348,6 @@
 "Assets/Ads/AdsButton.cs"
 "Assets/Ads/AdsController.cs"
 "Assets/Ads/HttpsRevenueSender.cs"
-"Assets/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs"
-"Assets/Demigiant/DOTween/Modules/DOTweenModulePhysics.cs"
-"Assets/Demigiant/DOTween/Modules/DOTweenModulePhysics2D.cs"
-"Assets/Demigiant/DOTween/Modules/DOTweenModuleSprite.cs"
-"Assets/Demigiant/DOTween/Modules/DOTweenModuleUI.cs"
-"Assets/Demigiant/DOTween/Modules/DOTweenModuleUnityVersion.cs"
-"Assets/Demigiant/DOTween/Modules/DOTweenModuleUtils.cs"
 "Assets/RestClient/DemoScene/Scripts/MainScript.cs"
 "Assets/RestClient/DemoScene/Scripts/Model/Photo.cs"
 "Assets/RestClient/DemoScene/Scripts/Model/Post.cs"

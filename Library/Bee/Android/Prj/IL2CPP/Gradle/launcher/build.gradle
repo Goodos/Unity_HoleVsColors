@@ -1,4 +1,10 @@
 apply plugin: 'com.android.application'
+apply plugin: 'applovin-quality-service'
+
+applovin {
+    // NOTE: DO NOT CHANGE - this is NOT your AppLovin MAX SDK key - this is a derived key.
+    apiKey 'zdVXgWvV0z32DThc6rb0p3__6i7pop0hzQzkXafGJfND1ZGT2Ty1zGny6STxR4IEP_Bl960hStL8TET2ZOa5AK'
+}
 
 dependencies {
     implementation project(':unityLibrary')
@@ -31,6 +37,15 @@ android {
         ignoreAssetsPattern = "!.svn:!.git:!.ds_store:!*.scc:!CVS:!thumbs.db:!picasa.ini:!*~"
     }
 
+    signingConfigs {
+        release {
+            storeFile file('E:/projects/Unity_HoleVsColors/holevscolor.keystore')
+            storePassword 'holevscolor'
+            keyAlias 'holevscolor'
+            keyPassword 'holevscolor'
+        }
+    }
+
     lintOptions {
         abortOnError false
     }
@@ -39,13 +54,13 @@ android {
         debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt')
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
             jniDebuggable true
         }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt')
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
         }
     }
 

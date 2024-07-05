@@ -12,12 +12,6 @@ ScriptsOnlyBuild:
     - DG.Tweening.Core.DOTweenSettings
     MaxSdk.Scripts.IntegrationManager.Editor:
     - AppLovinSettings
-    TextMeshPro-5.6-Runtime.dll:
-    - TMPro.TMP_FontAsset
-    - TMPro.TMP_Settings
-    - TMPro.TMP_SpriteAsset
-    - TMPro.TMP_StyleSheet
-    - TMPro.TextMeshProUGUI
     Unity.Recorder.Editor.dll:
     - UnityEditor.Recorder.ImageRecorderEditor
     - UnityEditor.Recorder.ImageRecorderSettings
@@ -25,6 +19,17 @@ ScriptsOnlyBuild:
     - UnityEditor.Recorder.RecorderPreferencesSettings
     - UnityEditor.Recorder.RecorderSettingsPrefsEditor
     - UnityEditor.Recorder.RecorderWindow
+    Unity.TextMeshPro:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -37,20 +42,28 @@ ScriptsOnlyBuild:
     DOTween:
     - DG.Tweening.Core.DOTweenSettings/ModulesSetup
     - DG.Tweening.Core.DOTweenSettings/SafeModeOptions
-    TextMeshPro-5.6-Runtime:
-    - TMPro.FaceInfo
-    - TMPro.FontCreationSetting
-    - TMPro.GlyphValueRecord
-    - TMPro.KerningPair
+    Unity.TextMeshPro:
+    - TMPro.FaceInfo_Legacy
+    - TMPro.FontAssetCreationSettings
     - TMPro.KerningTable
-    - TMPro.TMP_FontWeights
-    - TMPro.TMP_Glyph
+    - TMPro.TMP_Character
+    - TMPro.TMP_FontFeatureTable
+    - TMPro.TMP_FontWeightPair
+    - TMPro.TMP_GlyphAdjustmentRecord
+    - TMPro.TMP_GlyphPairAdjustmentRecord
+    - TMPro.TMP_GlyphValueRecord
     - TMPro.TMP_Sprite
+    - TMPro.TMP_SpriteCharacter
+    - TMPro.TMP_SpriteGlyph
     - TMPro.TMP_Style
-    - TMPro.TMP_TextInfo
     - TMPro.VertexGradient
     UnityEngine.CoreModule:
     - UnityEngine.Events.PersistentCallGroup
+    UnityEngine.TextCoreFontEngineModule:
+    - UnityEngine.TextCore.FaceInfo
+    - UnityEngine.TextCore.Glyph
+    - UnityEngine.TextCore.GlyphMetrics
+    - UnityEngine.TextCore.GlyphRect
     UnityEngine.UI:
     - UnityEngine.UI.AnimationTriggers
     - UnityEngine.UI.Button/ButtonClickedEvent
@@ -102,16 +115,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16728}
     - Class: 114
-      Script: {instanceID: 16756}
-    - Class: 114
-      Script: {instanceID: 16764}
-    - Class: 114
-      Script: {instanceID: 16774}
-    - Class: 114
-      Script: {instanceID: 16778}
-    - Class: 114
-      Script: {instanceID: 16780}
-    - Class: 114
       Script: {instanceID: 16966}
     - Class: 114
       Script: {instanceID: 16968}
@@ -137,9 +140,21 @@ ScriptsOnlyBuild:
       Script: {instanceID: 18240}
     - Class: 114
       Script: {instanceID: 18310}
+    - Class: 114
+      Script: {instanceID: 31772}
+    - Class: 114
+      Script: {instanceID: 31868}
+    - Class: 114
+      Script: {instanceID: 31890}
+    - Class: 114
+      Script: {instanceID: 31958}
+    - Class: 114
+      Script: {instanceID: 32074}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 135
       Script: {instanceID: 0}
@@ -205,10 +220,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16728}
     - Class: 114
-      Script: {instanceID: 16756}
-    - Class: 114
-      Script: {instanceID: 16764}
-    - Class: 114
       Script: {instanceID: 16968}
     - Class: 114
       Script: {instanceID: 17188}
@@ -228,9 +239,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 18162}
     - Class: 114
       Script: {instanceID: 18310}
+    - Class: 114
+      Script: {instanceID: 31772}
+    - Class: 114
+      Script: {instanceID: 31890}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 135
       Script: {instanceID: 0}
@@ -296,10 +313,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16728}
     - Class: 114
-      Script: {instanceID: 16756}
-    - Class: 114
-      Script: {instanceID: 16764}
-    - Class: 114
       Script: {instanceID: 16968}
     - Class: 114
       Script: {instanceID: 17188}
@@ -319,9 +332,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 18162}
     - Class: 114
       Script: {instanceID: 18310}
+    - Class: 114
+      Script: {instanceID: 31772}
+    - Class: 114
+      Script: {instanceID: 31890}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 135
       Script: {instanceID: 0}
@@ -386,108 +405,6 @@ ScriptsOnlyBuild:
     className: ContentSizeFitter
   - hash:
       serializedVersion: 2
-      Hash: 88ea27c3d5fa5407d4cce5a9c6e2de03
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TextContainer
-  - hash:
-      serializedVersion: 2
-      Hash: ad9310881fd96573f6464fc9a44f20d1
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TextMeshPro
-  - hash:
-      serializedVersion: 2
-      Hash: 71a85ce21076822e320ce4fb85a8b494
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TextMeshProUGUI
-  - hash:
-      serializedVersion: 2
-      Hash: 9c3e07c595afeaa8701a8140bc980fbf
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TMP_Asset
-  - hash:
-      serializedVersion: 2
-      Hash: ff944a2a1075c906b535cc14b0075daf
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TMP_ColorGradient
-  - hash:
-      serializedVersion: 2
-      Hash: 4259c824953b68a9be718de565687aed
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TMP_Dropdown
-  - hash:
-      serializedVersion: 2
-      Hash: 9c8d0767f10f9f06f2130a3f80fba00b
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TMP_FontAsset
-  - hash:
-      serializedVersion: 2
-      Hash: 321d789849d8d620cf9bb070d09ba78e
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TMP_InputField
-  - hash:
-      serializedVersion: 2
-      Hash: 907c2359a3beed1d0c4b863d4b241843
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TMP_ScrollbarEventHandler
-  - hash:
-      serializedVersion: 2
-      Hash: 11e52f01e33f3fbea2e746b6eb9e1e05
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TMP_SelectionCaret
-  - hash:
-      serializedVersion: 2
-      Hash: f55d90fc19c74784f2da559ace77c310
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TMP_Settings
-  - hash:
-      serializedVersion: 2
-      Hash: 31129d9f089cb45c06d19afc6d6e0294
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TMP_SpriteAnimator
-  - hash:
-      serializedVersion: 2
-      Hash: 8d45ff81e69bf5e2556886f0c3ef824d
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TMP_SpriteAsset
-  - hash:
-      serializedVersion: 2
-      Hash: 569eb453e98c42d2b23d9ea5f9e56f8e
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TMP_StyleSheet
-  - hash:
-      serializedVersion: 2
-      Hash: 21a5ddaebbe43fe20e5044293de449c9
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TMP_SubMesh
-  - hash:
-      serializedVersion: 2
-      Hash: 8679a215599a8ce513345cadbbf4de62
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TMP_SubMeshUI
-  - hash:
-      serializedVersion: 2
-      Hash: 1b61f2179204cbeba5c6085a4d27c531
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TMP_Text
-  - hash:
-      serializedVersion: 2
       Hash: 20a120e55ad3ab65556328d5fd8309dd
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -510,108 +427,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: LayoutElement
-  - hash:
-      serializedVersion: 2
-      Hash: 88ea27c3d5fa5407d4cce5a9c6e2de03
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TextContainer
-  - hash:
-      serializedVersion: 2
-      Hash: ad9310881fd96573f6464fc9a44f20d1
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TextMeshPro
-  - hash:
-      serializedVersion: 2
-      Hash: 71a85ce21076822e320ce4fb85a8b494
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TextMeshProUGUI
-  - hash:
-      serializedVersion: 2
-      Hash: 9c3e07c595afeaa8701a8140bc980fbf
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TMP_Asset
-  - hash:
-      serializedVersion: 2
-      Hash: ff944a2a1075c906b535cc14b0075daf
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TMP_ColorGradient
-  - hash:
-      serializedVersion: 2
-      Hash: 4259c824953b68a9be718de565687aed
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TMP_Dropdown
-  - hash:
-      serializedVersion: 2
-      Hash: 9c8d0767f10f9f06f2130a3f80fba00b
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TMP_FontAsset
-  - hash:
-      serializedVersion: 2
-      Hash: 321d789849d8d620cf9bb070d09ba78e
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TMP_InputField
-  - hash:
-      serializedVersion: 2
-      Hash: 907c2359a3beed1d0c4b863d4b241843
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TMP_ScrollbarEventHandler
-  - hash:
-      serializedVersion: 2
-      Hash: 11e52f01e33f3fbea2e746b6eb9e1e05
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TMP_SelectionCaret
-  - hash:
-      serializedVersion: 2
-      Hash: f55d90fc19c74784f2da559ace77c310
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TMP_Settings
-  - hash:
-      serializedVersion: 2
-      Hash: 31129d9f089cb45c06d19afc6d6e0294
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TMP_SpriteAnimator
-  - hash:
-      serializedVersion: 2
-      Hash: 8d45ff81e69bf5e2556886f0c3ef824d
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TMP_SpriteAsset
-  - hash:
-      serializedVersion: 2
-      Hash: 569eb453e98c42d2b23d9ea5f9e56f8e
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TMP_StyleSheet
-  - hash:
-      serializedVersion: 2
-      Hash: 21a5ddaebbe43fe20e5044293de449c9
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TMP_SubMesh
-  - hash:
-      serializedVersion: 2
-      Hash: 8679a215599a8ce513345cadbbf4de62
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TMP_SubMeshUI
-  - hash:
-      serializedVersion: 2
-      Hash: 1b61f2179204cbeba5c6085a4d27c531
-    assemblyName: TextMeshPro-5.6-Runtime.dll
-    namespaceName: TMPro
-    className: TMP_Text
   - hash:
       serializedVersion: 2
       Hash: f2305da2400dfe6f069770a1a63f0f7c
@@ -650,7 +465,7 @@ ScriptsOnlyBuild:
     className: DOTweenComponent
   - hash:
       serializedVersion: 2
-      Hash: 30b9a6f1d33da298e6b825737b3b032f
+      Hash: 4f1dec93fa2a0b0e7b8b47518da31b1c
     assemblyName: DOTween.dll
     namespaceName: DG.Tweening.Core
     className: DOTweenSettings
@@ -770,7 +585,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: a53f3cfb68c1b37bb12b56bed22db2fa
+      Hash: 9198d1da715c7a103c2f7c67d5ffdd1f
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: AdsButton
@@ -942,9 +757,99 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 17f82e3e7d8f8b07a270a4aad9bfe79d
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TMP_FontAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 8bbce9932f67ad8e7f4eefec87800f94
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: 8e6dc3d79712ca4934f6d50c80f010b1
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TMP_SpriteAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 1553f209ae0b2d5d3a35685fca55f9c3
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TMP_ScrollbarEventHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 185e7bacfbbc5defefa609c70f7ff4ce
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TMP_ColorGradient
+  - hash:
+      serializedVersion: 2
+      Hash: 9078325c2a6f6a2d9612ade897511860
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TMP_SpriteAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 9637dcdf3068a91dfe653e61bb82f13d
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
+      Hash: e7e95903ca66d58e1a7cbd71f824e16d
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TMP_SubMeshUI
+  - hash:
+      serializedVersion: 2
+      Hash: 960935b102b3064f4b924de16426e340
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TextMeshPro
+  - hash:
+      serializedVersion: 2
+      Hash: 13f262cc0741566a7ab72682984bc3e1
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TMP_SubMesh
+  - hash:
+      serializedVersion: 2
+      Hash: c933b590b3badb5918fa01e73cd5cc0c
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TMP_Settings
+  - hash:
+      serializedVersion: 2
+      Hash: 3b5263a98bcc71d9a9d1d78a31b34ced
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TMP_SelectionCaret
+  - hash:
+      serializedVersion: 2
+      Hash: 52db48e3be0a2b4f8b06f918fd1ebfbc
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TMP_Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: 0c6de72eaf8c1070da824268c4bfad9d
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TMP_StyleSheet
+  - hash:
+      serializedVersion: 2
+      Hash: 47ee34eb8b6021efa0289dbbb17a5a85
+    assemblyName: Unity.TextMeshPro
+    namespaceName: TMPro
+    className: TMP_InputField
   platform: 13
   scenePathNames:
   - Assets/Scenes/levels/level01.unity
   - Assets/Scenes/levels/level02.unity
   - Assets/Scenes/levels/level03.unity
-  playerPath: E:/projects/vovi/com.vooj.skyfighter/com.vooj.skyfighter.apk
+  playerPath: E:/projects/vovi/com.vooj.skyfighter/com.vooj.skyfighter.aab

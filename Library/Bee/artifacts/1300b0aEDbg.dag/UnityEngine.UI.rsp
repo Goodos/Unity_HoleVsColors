@@ -121,6 +121,7 @@
 -define:ENABLE_TIMELINE
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
+-define:DOTWEEN
 -define:PACKAGE_PHYSICS
 -define:PACKAGE_PHYSICS2D
 -define:PACKAGE_TILEMAP
@@ -128,15 +129,13 @@
 -define:PACKAGE_UITOOLKIT
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
--r:"Assets/Demigiant/DOTween/DOTween.dll"
--r:"Assets/Demigiant/DOTween/Editor/DOTweenEditor.dll"
 -r:"Assets/ExternalDependencyManager/Editor/1.2.176/Google.IOSResolver.dll"
 -r:"Assets/ExternalDependencyManager/Editor/1.2.176/Google.JarResolver.dll"
 -r:"Assets/ExternalDependencyManager/Editor/1.2.176/Google.PackageManagerResolver.dll"
 -r:"Assets/ExternalDependencyManager/Editor/1.2.176/Google.VersionHandlerImpl.dll"
 -r:"Assets/ExternalDependencyManager/Editor/Google.VersionHandler.dll"
--r:"Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-5.6-Editor.dll"
--r:"Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-5.6-Runtime.dll"
+-r:"Assets/Plugins/Demigiant/DOTween/DOTween.dll"
+-r:"Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll"
 -r:"E:/projects/Editor/2022.3.29f1/Editor/Data/Managed/UnityEditor.Graphs.dll"
 -r:"E:/projects/Editor/2022.3.29f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"E:/projects/Editor/2022.3.29f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"

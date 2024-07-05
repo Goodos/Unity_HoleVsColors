@@ -6,6 +6,7 @@ plugins {
     id 'com.android.application' version '7.1.2' apply false
     id 'com.android.library' version '7.1.2' apply false
     
+    id 'com.applovin.quality' version '+' apply false // NOTE: Requires version 4.8.3+ for Gradle version 7.2+
 }
 
 task clean(type: Delete) {
