@@ -1,0 +1,36 @@
+pluginManagement {
+    repositories {
+        
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+
+include ':launcher', ':unityLibrary'
+
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        
+        google()
+        mavenCentral()
+// Android Resolver Repos Start
+        def unityProjectPath = $/file:///E:/projects/Unity_HoleVsColors/$.replace("\\", "/")
+        maven {
+            url "https://artifact.bytedance.com/repository/pangle" // Assets/MaxSdk/Mediation/ByteDance/Editor/Dependencies.xml:8
+        }
+        maven {
+            url "https://android-sdk.is.com/" // Assets/MaxSdk/Mediation/IronSource/Editor/Dependencies.xml:8
+        }
+        maven {
+            url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea" // Assets/MaxSdk/Mediation/Mintegral/Editor/Dependencies.xml:8
+        }
+        mavenLocal()
+// Android Resolver Repos End
+        flatDir {
+            dirs "${project(':unityLibrary').projectDir}/libs"
+        }
+    }
+}
